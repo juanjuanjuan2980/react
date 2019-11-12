@@ -4,8 +4,8 @@ require('../lib/swiper.min.css');
 let Swiper = require('../lib/swiper.min.js');
 let jsonp = require('../util/jsonp.js');
 
-import React from 'react';     
-
+import React from 'react';
+dfffffffffffff
 let Header = React.createClass({
 	getInitialState: function() {
         return {
@@ -16,7 +16,7 @@ let Header = React.createClass({
 		jsonp(this.props.source, "", "callback", (data) => {
 			if(data.status) {
 				//如果组件渲染到了 DOM 中，isMounted() 返回 true。
-				//可以使用该方法保证 setState() 和 forceUpdate() 
+				//可以使用该方法保证 setState() 和 forceUpdate()
 				//在异步场景下的调用不会出错。
 				if(this.isMounted()) {
 					this.setState({
@@ -27,13 +27,13 @@ let Header = React.createClass({
 					    pagination: '.swiper-pagination',
 					    paginationClickable: true,
 					    autoplay : 3000,
-						autoplayDisableOnInteraction : false,		    
-					}) 
-				}	
+						autoplayDisableOnInteraction : false,
+					})
+				}
 			}else {
 				alert(data.msg);
 			}
-		}); 
+		});
 	},
 
 	render: function () {
